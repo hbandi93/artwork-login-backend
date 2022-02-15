@@ -1,0 +1,23 @@
+{
+  "name": "artwork-login-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbandi93/artwork-login-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hbandi93/artwork-login-backend/issues"
+  },
+  "homepage": "https://github.com/hbandi93/artwork-login-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  }
+}
