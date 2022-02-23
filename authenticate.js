@@ -1,5 +1,6 @@
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
+const process = require("process");
 const dev = process.env.NODE_ENV !== "production";
 
 exports.COOKIE_OPTIONS = {
