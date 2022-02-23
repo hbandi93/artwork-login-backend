@@ -3,6 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const passport = require("passport");
+const process = require("process");
 
 if (process.env.NODE_ENV !== "production") {
   // Load environment variables from .env file in non prod environments
