@@ -5,6 +5,8 @@ const cookieParser = require("cookie-parser");
 const passport = require("passport");
 const process = require("process");
 
+app.use(cors())
+
 if (process.env.NODE_ENV !== "production") {
   // Load environment variables from .env file in non prod environments
   require("dotenv").config();
@@ -27,20 +29,6 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 const whitelist = process.env.WHITELISTED_DOMAINS
   ? process.env.WHITELISTED_DOMAINS.split(",")
   : [];
-
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (!origin || whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
 
 app.use(passport.initialize());
 
