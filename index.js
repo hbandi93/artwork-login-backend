@@ -47,7 +47,7 @@ app.get("/", function (req, res) {
     res.send({ status: "success" });
 });
 
-app.post("/images/Johnny", async (req, res) => {
+app.post("/images/tibor", async (req, res) => {
     imageDetails.push(req.body[0])
     try {
         const response = await axios.post("http://localhost:5000/", imageDetails)
